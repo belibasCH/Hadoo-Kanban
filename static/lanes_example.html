@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<!-- Styles importieren -->
+<head><link rel='stylesheet' href='styles.css'> </link></head>
+
+<body>
+    <h1>Hadoo HTML Example</h1>
+    <!-- Das hier ist der umgebende Container, der die Lanes enthält. -->
+    <div class='container'>
+        <!-- Das hier ist die erste Lane. -->
+        <div class='lane'>
+            <!-- Der Titel der Lane.-->
+            <div class='title'>Todo</div>
+
+            <!-- Das hier das erste Item in der Todo Lane. -->
+            <div class='item'>
+               
+                <!-- Der Text ist in einem <pre> damit die Zeilenumbrüche erhalten bleiben. -->
+                <pre>
+Todo1: 
+Es gibt viel zu tun, packen wir es an.
+                </pre>
+                
+                <!-- Das sind die Actions pro Item. Die class='inline' macht, dass die Buttons nebeneinander erscheinen-->
+                <form method='post' action='/items/Todo/1/move/Started' class='inline'>
+                    <button type='submit'>&gt;</button>
+                </form>
+                <form method='get' action='/items/Todo/1/edit' class='inline' >
+                    <button type='submit'>Edit</button>
+                </form>
+                <form method='post' action='/items/Todo/1/delete' class='inline'>
+                    <button type='submit'>Delete</button>
+                </form>
+            </div>
+
+            <!-- Das hier das zweite Item in der Todo Lane. -->
+            <div class='item'>
+                <pre>
+Todo2: 
+Let's go :)
+                </pre>
+                <form method='post' action='/items/Todo/2/move/Started' class='inline'>
+                    <button type='submit'>&gt;</button>
+                </form>
+                <form method='get' action='/items/Todo/2/edit' class='inline' >
+                    <button type='submit'>Edit</button>
+                </form>
+                <form method='post' action='/items/Todo/2/delete' class='inline'>
+                    <button type='submit'>Delete</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Das ist die zweite Lane. -->
+        <div class='lane'>
+            <div class='title'>Done</div>
+            <div class='item'>
+                <pre>
+Done1:
+Projekt runterladen.
+                </pre>
+                <form action='/items/Done/1/move/Started' method='post' class='inline'>
+                    <button type='submit'>&lt;</button>
+                </form>
+                <form method='get' action='/items/Done/1/edit' class='inline' >
+                    <button type='submit'>Edit</button>
+                </form>
+                <form method='post' action='/items/Done/1/delete' class='inline'>
+                    <button type='submit'>Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
